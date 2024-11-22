@@ -1,10 +1,8 @@
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class Count {
-    public static void main(String[] args) {
-        String IN_FILE = args[0];
+    public static int execute(String IN_FILE){
         try (FileInputStream fis = new FileInputStream(IN_FILE)) {
             int sequenceFoundCount = 0;
             int length;
@@ -22,10 +20,11 @@ public class Count {
                 if(find(dataBuffer, key))
                     sequenceFoundCount++;
             }
-            System.out.println(sequenceFoundCount);
+            return sequenceFoundCount;
         } catch (IOException e) {
             e.printStackTrace();
         }
+        throw new IllegalStateException();
     }
     
     private static boolean find(byte[] buffer, byte[] key) {

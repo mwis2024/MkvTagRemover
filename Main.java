@@ -4,11 +4,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-class Main{
+public class Main{
     public static void main(String[] args) {
         String IN_FILE = args[0];
         String OUT_FILE = args[1];
-        int sequencesToFind = args.length == 3 ? Integer.parseInt(args[2]) : 8;
+        int sequencesToFind = Count.execute(IN_FILE);
         try (FileInputStream fis = new FileInputStream(IN_FILE); FileOutputStream fout = new FileOutputStream(OUT_FILE)) {
             int sequenceFoundCount = 0;
             int length;

@@ -3,6 +3,4 @@ A program that I've written to quickly delete badly written description tags (de
 
 TODO:
 - Change program's logic from "delete all description tags" to select what to delete
-- Integrate Count.java into Main class (seeking number of description tags to delete)
-- Better analyze the edge cases
-- Delete unused code
+- Better analyze the edge cases - leaving unused code for future reference
